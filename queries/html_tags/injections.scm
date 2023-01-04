@@ -58,6 +58,17 @@
   (#eq? @_javascript "text/javascript")
 )
 
+(
+  (script_element
+    (start_tag
+      (attribute
+        (attribute_name) @_type
+        (quoted_attribute_value (attribute_value) @_javascript)))
+    (raw_text) @javascript)
+  (#eq? @_type "type")
+  (#eq? @_javascript "module")
+)
+
 ((attribute
    (attribute_name) @_attr
    (quoted_attribute_value (attribute_value) @css))
